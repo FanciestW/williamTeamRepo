@@ -1,0 +1,23 @@
+<head>
+    <title>HomeNucleus database example</title>
+</head>
+<body>
+    <h1>Users</h1>
+    {{ > users}}
+    <div>
+    	<form>
+			name::<br>
+			<input id="user-field" type="text" name="username">
+			<br>
+			ID#:<br>
+			<input id="id-field" type="text" name="userid">
+		</form>
+		<button id="add">add</button>
+	</div>
+</body>
+
+<template name="users">
+    {{#each user}}
+        {{username}} {{userid}}
+    {{/each}}
+</template>
